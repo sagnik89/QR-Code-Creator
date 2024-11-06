@@ -28,9 +28,10 @@ app.post("/generate", (req, res) => {
         
     }
     
+    // rendering home page
     res.render("home.ejs", 
         {
-            htmlContent: `<img src="../public/images/qr-image.png" alt="QR Image">`
+            htmlContent: true
         }
     )
 })

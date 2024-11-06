@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Creator</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <h1>QR Code Creator</h1>
+
+    <div class="container">
     <form action="/generate" method="post">
-        <input type="text" name="userLink" placeholder="link">
+        <input type="text" name="userLink" placeholder="link" id="userLink">
         <input type="submit" value="Generate QR">
     </form>
+    <div class="image-container">
     <% if (locals.htmlContent) { %>
      <img src="images/qr-image.png" alt="">
     <% } %>
+    </div>
+</div>
 
 </body>
 </html>
